@@ -8,31 +8,25 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
-
-
 function Details() {
   const location = useLocation();
   const person = location.state.person;
-  let entries = Object.entries(person)
-  
-
-  console.log(person)
+  let entries = Object.entries(person);
 
   return (
     <div>
       <h1>Hi {person.name}:</h1>
       <List>
-      {entries.map( ([label, val] = entry) => ()
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar>
-                  <ArrowCircleRightOutlinedIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary={label} secondary={val} />
-            </ListItem>
-          )
-        )}
+        {entries.map(([label, val] = entry) => (
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <ArrowCircleRightOutlinedIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={label} secondary={val} />
+          </ListItem>
+        ))}
       </List>
     </div>
   );
