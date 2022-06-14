@@ -30,7 +30,7 @@ export default function Home(props) {
         {props.peopele.map(
           (person, i) =>
             person.name.toLowerCase().includes(props.searchTerm) && (
-              <Link to="/details" state={{ person }}>
+              <Link to="/details" state={{ person }} style={{ color: '#666' }}>
                 <ListItem key={i}>
                   <ListItemButton>
                     <ListItemIcon>

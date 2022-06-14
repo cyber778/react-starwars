@@ -17,3 +17,7 @@ h1 {
 ul li {
   font-size: 2rem;
 }
+
+a{
+  text-decoration: none;
+}

@@ -17,8 +17,8 @@ function Details() {
     <div>
       <h1>Hi {person.name}:</h1>
       <List>
-        {entries.map(([label, val] = entry) => (
-          <ListItem>
+        {entries.map(([label, val] = entry, i) => (
+          <ListItem key={i}>
             <ListItemAvatar>
               <Avatar>
                 <ArrowCircleRightOutlinedIcon />
